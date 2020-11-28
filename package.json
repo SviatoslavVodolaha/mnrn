@@ -1,0 +1,19 @@
+{
+  "name": "reactNest",
+  "version": "1.0.0",
+  "description": "react and nest app",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "client": "npm run start --prefix client",
+    "client:build": "npm run build --prefix client",
+    "server": "npm run start:dev --prefix server",
+    "server:build": "npm run build --prefix server",
+    "dev" : "concurrently \"yarn client\" \"yarn server\"",
+    "build": "concurrently \"yarn client:build\" \"yarn server:build\""
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.2"
+  }
+}
